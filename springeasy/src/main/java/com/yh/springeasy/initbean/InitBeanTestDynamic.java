@@ -21,7 +21,7 @@ public class InitBeanTestDynamic implements InitializingBean {
             @Override
             public void run() {
                 age += 10;
-                System.out.println("模拟后台热更新改变 age=" + age);
+            //    System.out.println("模拟后台热更新改变 age=" + age);
             }
         }, 3l, 3l, TimeUnit.SECONDS);
         return age;
