@@ -2,12 +2,18 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="nacos-consumer" />
+        <module name="zookeeper" />
+        <module name="codis" />
         <module name="springeasy" />
         <module name="akka" />
+        <module name="nacos-provider" />
+        <module name="nacos-demo-service" />
       </profile>
     </annotationProcessing>
   </component>

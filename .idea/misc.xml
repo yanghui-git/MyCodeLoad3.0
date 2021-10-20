@@ -7,6 +7,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/springeasy/pom.xml" />
         <option value="$PROJECT_DIR$/akka/pom.xml" />
+        <option value="$PROJECT_DIR$/codis/pom.xml" />
+        <option value="$PROJECT_DIR$/zookeeper/pom.xml" />
+        <option value="$PROJECT_DIR$/nacos-demo-service/pom.xml" />
       </list>
     </option>
   </component>

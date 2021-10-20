@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:dubbp="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- consumer的名字 -->
+    <dubbo:application name="nacos-consumer-yh"/>
+    <!-- dubbo所使用的注册中心 protocol表示是什么注册中心，address代表注册中心ip+端口号 -->
+    <dubbo:registry address="nacos://121.199.72.238:8848/"/>
+    <!-- 调用对外提供的service接口 -->
+    <dubbo:reference id="demoService" interface="com.demo.service.DemoService"
+                     check="false"
+    />
+
+    <dubbo:protocol name="dubbo" port="7792" serialization="kryo"/>
+
+</beans>
