@@ -10,9 +10,11 @@
         <module name="nacos-consumer" />
         <module name="zookeeper" />
         <module name="codis" />
+        <module name="math" />
         <module name="springeasy" />
         <module name="akka" />
         <module name="nacos-provider" />
+        <module name="mybatis-plus" />
         <module name="nacos-demo-service" />
       </profile>
     </annotationProcessing>

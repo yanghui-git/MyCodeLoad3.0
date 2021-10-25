@@ -14,6 +14,8 @@
         <module>nacos-provider</module>
         <module>nacos-consumer</module>
         <module>nacos-demo-service</module>
+        <module>math</module>
+        <module>mybatis-plus</module>
     </modules>
 
 
