@@ -32,6 +32,8 @@ public class DemoUserController {
     public Object testFive(@RequestParam(required = true,defaultValue = "1") Integer pageNum,
                            @RequestParam(required = true,defaultValue = "20") Integer pageSize) {
         PageHelper.startPage(pageNum, pageSize);
+        //配置系统属性为true,代理类生成时将自动写入磁盘
+        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
         PageInfo<DemoUser> pageInfo = new PageInfo<DemoUser>(demoUserMapper.selectList(null));
         PageHelper.clearPage();
         return pageInfo;

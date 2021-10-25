@@ -2,6 +2,7 @@ package com.yh.mybatisplus.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
+import com.yh.mybatisplus.interceptor.MyInterceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -48,6 +49,10 @@ public class MybatisConfig {
     public SqlSessionFactory sqlSessionFactory(@Qualifier("mysqlConfig") DataSource dataSource) throws Exception {
         MybatisSqlSessionFactoryBean bean = new MybatisSqlSessionFactoryBean();
         bean.setDataSource(dataSource);
+
+        //添加自定义拦截器
+        bean.setPlugins(new MyInterceptor());
+
         bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:mapper/*.xml"));
         return bean.getObject();
     }
