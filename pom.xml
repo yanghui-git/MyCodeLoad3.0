@@ -16,6 +16,7 @@
         <module>nacos-demo-service</module>
         <module>math</module>
         <module>mybatis-plus</module>
+        <module>FastJson</module>
     </modules>
 
 

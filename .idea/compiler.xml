@@ -10,6 +10,7 @@
         <module name="nacos-consumer" />
         <module name="zookeeper" />
         <module name="codis" />
+        <module name="FastJson" />
         <module name="math" />
         <module name="springeasy" />
         <module name="akka" />
