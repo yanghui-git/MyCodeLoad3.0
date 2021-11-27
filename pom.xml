@@ -17,6 +17,7 @@
         <module>math</module>
         <module>mybatis-plus</module>
         <module>FastJson</module>
+        <module>mongo</module>
     </modules>
 
 
