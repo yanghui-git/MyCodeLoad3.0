@@ -51,6 +51,7 @@ public class MHTest {
 
     /**
      * 获取方法句柄
+     *
      * @return
      */
     public static MethodHandle getToStringMH() {

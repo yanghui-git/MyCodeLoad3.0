@@ -1,0 +1,120 @@
+Classfile /Users/hui.yang/IdeaProjects/MyCodeLoad3.0/springeasy/src/main/java/com/yh/springeasy/invoke/JavaCommonInvokeInstruction.class
+  Last modified 2021-12-3; size 916 bytes
+  MD5 checksum 1f0f1773622f5b90a9a80a6754defc38
+  Compiled from "JavaCommonInvokeInstruction.java"
+public class com.yh.springeasy.invoke.JavaCommonInvokeInstruction
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #8.#27         // java/lang/Object."<init>":()V
+   #2 = Class              #28            // com/yh/springeasy/invoke/InvokeInterfaceImpl
+   #3 = Methodref          #2.#27         // com/yh/springeasy/invoke/InvokeInterfaceImpl."<init>":()V
+   #4 = InterfaceMethodref #29.#30        // com/yh/springeasy/invoke/InvokeInterface.invokeInterface:()V
+   #5 = Methodref          #2.#31         // com/yh/springeasy/invoke/InvokeInterfaceImpl.invokeNormalMethod:()V
+   #6 = Methodref          #2.#32         // com/yh/springeasy/invoke/InvokeInterfaceImpl.invokeStaticMethod:()V
+   #7 = Class              #33            // com/yh/springeasy/invoke/JavaCommonInvokeInstruction
+   #8 = Class              #34            // java/lang/Object
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               Lcom/yh/springeasy/invoke/JavaCommonInvokeInstruction;
+  #16 = Utf8               main
+  #17 = Utf8               ([Ljava/lang/String;)V
+  #18 = Utf8               args
+  #19 = Utf8               [Ljava/lang/String;
+  #20 = Utf8               invoke
+  #21 = Utf8               sample
+  #22 = Utf8               Lcom/yh/springeasy/invoke/InvokeInterface;
+  #23 = Utf8               sampleImpl
+  #24 = Utf8               Lcom/yh/springeasy/invoke/InvokeInterfaceImpl;
+  #25 = Utf8               SourceFile
+  #26 = Utf8               JavaCommonInvokeInstruction.java
+  #27 = NameAndType        #9:#10         // "<init>":()V
+  #28 = Utf8               com/yh/springeasy/invoke/InvokeInterfaceImpl
+  #29 = Class              #35            // com/yh/springeasy/invoke/InvokeInterface
+  #30 = NameAndType        #36:#10        // invokeInterface:()V
+  #31 = NameAndType        #37:#10        // invokeNormalMethod:()V
+  #32 = NameAndType        #38:#10        // invokeStaticMethod:()V
+  #33 = Utf8               com/yh/springeasy/invoke/JavaCommonInvokeInstruction
+  #34 = Utf8               java/lang/Object
+  #35 = Utf8               com/yh/springeasy/invoke/InvokeInterface
+  #36 = Utf8               invokeInterface
+  #37 = Utf8               invokeNormalMethod
+  #38 = Utf8               invokeStaticMethod
+{
+  public com.yh.springeasy.invoke.JavaCommonInvokeInstruction();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/yh/springeasy/invoke/JavaCommonInvokeInstruction;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: return
+      LineNumberTable:
+        line 7: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  args   [Ljava/lang/String;
+
+  public void invoke();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: new           #2                  // class com/yh/springeasy/invoke/InvokeInterfaceImpl
+         3: dup
+         4: invokespecial #3                  // Method com/yh/springeasy/invoke/InvokeInterfaceImpl."<init>":()V
+         7: astore_1
+         8: aload_1
+         9: invokeinterface #4,  1            // InterfaceMethod com/yh/springeasy/invoke/InvokeInterface.invokeInterface:()V
+        14: new           #2                  // class com/yh/springeasy/invoke/InvokeInterfaceImpl
+        17: dup
+        18: invokespecial #3                  // Method com/yh/springeasy/invoke/InvokeInterfaceImpl."<init>":()V
+        21: astore_2
+        22: aload_2
+        23: invokevirtual #5                  // Method com/yh/springeasy/invoke/InvokeInterfaceImpl.invokeNormalMethod:()V
+        26: invokestatic  #6                  // Method com/yh/springeasy/invoke/InvokeInterfaceImpl.invokeStaticMethod:()V
+        29: return
+      LineNumberTable:
+        line 11: 0
+        line 13: 8
+        line 14: 14
+        line 16: 22
+        line 18: 26
+        line 19: 29
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      30     0  this   Lcom/yh/springeasy/invoke/JavaCommonInvokeInstruction;
+            8      22     1 sample   Lcom/yh/springeasy/invoke/InvokeInterface;
+           22       8     2 sampleImpl   Lcom/yh/springeasy/invoke/InvokeInterfaceImpl;
+}
+SourceFile: "JavaCommonInvokeInstruction.java"
+
+
+/**
+* Invokevirtual：根据虚方法表调用虚方法。
+
+ 2、 invokespecial,：调用实例构造方法（
+
+ 方法），私有方法，父类继承方法。
+
+ 3、 invokeinteface：调用接口方法。
+
+ 4、 invokestatic：调用静态方法
+*/

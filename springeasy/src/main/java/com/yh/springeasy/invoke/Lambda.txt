@@ -1,0 +1,133 @@
+Classfile /Users/hui.yang/IdeaProjects/MyCodeLoad3.0/springeasy/src/main/java/com/yh/springeasy/invoke/Lambda.class
+  Last modified 2021-12-3; size 1348 bytes
+  MD5 checksum 3c12cd4c4609c7a6750fa18db50ce6f9
+  Compiled from "Lambda.java"
+public class com.yh.springeasy.invoke.Lambda
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #7.#30         // java/lang/Object."<init>":()V
+   #2 = Class              #31            // com/yh/springeasy/invoke/Lambda
+   #3 = Methodref          #2.#30         // com/yh/springeasy/invoke/Lambda."<init>":()V
+   #4 = InvokeDynamic      #0:#36         // #0:func:()Lcom/yh/springeasy/invoke/Func;
+   #5 = Methodref          #2.#37         // com/yh/springeasy/invoke/Lambda.lambda:(Lcom/yh/springeasy/invoke/Func;)V
+   #6 = InvokeDynamic      #1:#36         // #1:func:()Lcom/yh/springeasy/invoke/Func;
+   #7 = Class              #39            // java/lang/Object
+   #8 = Utf8               <init>
+   #9 = Utf8               ()V
+  #10 = Utf8               Code
+  #11 = Utf8               LineNumberTable
+  #12 = Utf8               LocalVariableTable
+  #13 = Utf8               this
+  #14 = Utf8               Lcom/yh/springeasy/invoke/Lambda;
+  #15 = Utf8               lambda
+  #16 = Utf8               (Lcom/yh/springeasy/invoke/Func;)V
+  #17 = Utf8               func
+  #18 = Utf8               Lcom/yh/springeasy/invoke/Func;
+  #19 = Utf8               main
+  #20 = Utf8               ([Ljava/lang/String;)V
+  #21 = Utf8               args
+  #22 = Utf8               [Ljava/lang/String;
+  #23 = Utf8               lambda$main$1
+  #24 = Utf8               (Ljava/lang/String;)Z
+  #25 = Utf8               s
+  #26 = Utf8               Ljava/lang/String;
+  #27 = Utf8               lambda$main$0
+  #28 = Utf8               SourceFile
+  #29 = Utf8               Lambda.java
+  #30 = NameAndType        #8:#9          // "<init>":()V
+  #31 = Utf8               com/yh/springeasy/invoke/Lambda
+  #32 = Utf8               BootstrapMethods
+  #33 = MethodHandle       #6:#40         // invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #34 = MethodType         #24            //  (Ljava/lang/String;)Z
+  #35 = MethodHandle       #6:#41         // invokestatic com/yh/springeasy/invoke/Lambda.lambda$main$0:(Ljava/lang/String;)Z
+  #36 = NameAndType        #17:#42        // func:()Lcom/yh/springeasy/invoke/Func;
+  #37 = NameAndType        #15:#16        // lambda:(Lcom/yh/springeasy/invoke/Func;)V
+  #38 = MethodHandle       #6:#43         // invokestatic com/yh/springeasy/invoke/Lambda.lambda$main$1:(Ljava/lang/String;)Z
+  #39 = Utf8               java/lang/Object
+  #40 = Methodref          #44.#45        // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #41 = Methodref          #2.#46         // com/yh/springeasy/invoke/Lambda.lambda$main$0:(Ljava/lang/String;)Z
+  #42 = Utf8               ()Lcom/yh/springeasy/invoke/Func;
+  #43 = Methodref          #2.#47         // com/yh/springeasy/invoke/Lambda.lambda$main$1:(Ljava/lang/String;)Z
+  #44 = Class              #48            // java/lang/invoke/LambdaMetafactory
+  #45 = NameAndType        #49:#53        // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #46 = NameAndType        #27:#24        // lambda$main$0:(Ljava/lang/String;)Z
+  #47 = NameAndType        #23:#24        // lambda$main$1:(Ljava/lang/String;)Z
+  #48 = Utf8               java/lang/invoke/LambdaMetafactory
+  #49 = Utf8               metafactory
+  #50 = Class              #55            // java/lang/invoke/MethodHandles$Lookup
+  #51 = Utf8               Lookup
+  #52 = Utf8               InnerClasses
+  #53 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #54 = Class              #56            // java/lang/invoke/MethodHandles
+  #55 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #56 = Utf8               java/lang/invoke/MethodHandles
+{
+  public com.yh.springeasy.invoke.Lambda();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/yh/springeasy/invoke/Lambda;
+
+  public void lambda(com.yh.springeasy.invoke.Func);
+    descriptor: (Lcom/yh/springeasy/invoke/Func;)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=0, locals=2, args_size=2
+         0: return
+      LineNumberTable:
+        line 6: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  this   Lcom/yh/springeasy/invoke/Lambda;
+            0       1     1  func   Lcom/yh/springeasy/invoke/Func;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: new           #2                  // class com/yh/springeasy/invoke/Lambda
+         3: dup
+         4: invokespecial #3                  // Method "<init>":()V
+         7: astore_1
+         8: aload_1
+         9: invokedynamic #4,  0              // InvokeDynamic #0:func:()Lcom/yh/springeasy/invoke/Func;
+        14: invokevirtual #5                  // Method lambda:(Lcom/yh/springeasy/invoke/Func;)V
+        17: aload_1
+        18: invokedynamic #6,  0              // InvokeDynamic #1:func:()Lcom/yh/springeasy/invoke/Func;
+        23: invokevirtual #5                  // Method lambda:(Lcom/yh/springeasy/invoke/Func;)V
+        26: return
+      LineNumberTable:
+        line 10: 0
+        line 11: 8
+        line 14: 17
+        line 18: 26
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      27     0  args   [Ljava/lang/String;
+            8      19     1 lambda   Lcom/yh/springeasy/invoke/Lambda;
+}
+SourceFile: "Lambda.java"
+InnerClasses:
+     public static final #51= #50 of #54; //Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+BootstrapMethods:
+  0: #33 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #34 (Ljava/lang/String;)Z
+      #35 invokestatic com/yh/springeasy/invoke/Lambda.lambda$main$0:(Ljava/lang/String;)Z
+      #34 (Ljava/lang/String;)Z
+  1: #33 invokestatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #34 (Ljava/lang/String;)Z
+      #38 invokestatic com/yh/springeasy/invoke/Lambda.lambda$main$1:(Ljava/lang/String;)Z
+      #34 (Ljava/lang/String;)Z

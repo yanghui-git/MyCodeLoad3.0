@@ -1,0 +1,84 @@
+Classfile /Users/hui.yang/IdeaProjects/MyCodeLoad3.0/springeasy/src/main/java/com/yh/springeasy/invoke/ReflectionMain.class
+  Last modified 2021-12-3; size 634 bytes
+  MD5 checksum b0e4939283a7ee02e320ff1786aa42ae
+  Compiled from "ReflectionMain.java"
+public class com.yh.springeasy.invoke.ReflectionMain
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #7.#19         // java/lang/Object."<init>":()V
+   #2 = String             #20            // length
+   #3 = Class              #21            // java/lang/String
+   #4 = Class              #22            // java/lang/Class
+   #5 = Methodref          #4.#23         // java/lang/Class.getDeclaredMethod:(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+   #6 = String             #24            // abc
+   #7 = Class              #25            // java/lang/Object
+   #8 = Methodref          #26.#27        // java/lang/reflect/Method.invoke:(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+   #9 = Class              #28            // com/yh/springeasy/invoke/ReflectionMain
+  #10 = Utf8               <init>
+  #11 = Utf8               ()V
+  #12 = Utf8               Code
+  #13 = Utf8               LineNumberTable
+  #14 = Utf8               reflection
+  #15 = Utf8               Exceptions
+  #16 = Class              #29            // java/lang/Exception
+  #17 = Utf8               SourceFile
+  #18 = Utf8               ReflectionMain.java
+  #19 = NameAndType        #10:#11        // "<init>":()V
+  #20 = Utf8               length
+  #21 = Utf8               java/lang/String
+  #22 = Utf8               java/lang/Class
+  #23 = NameAndType        #30:#31        // getDeclaredMethod:(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+  #24 = Utf8               abc
+  #25 = Utf8               java/lang/Object
+  #26 = Class              #32            // java/lang/reflect/Method
+  #27 = NameAndType        #33:#34        // invoke:(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+  #28 = Utf8               com/yh/springeasy/invoke/ReflectionMain
+  #29 = Utf8               java/lang/Exception
+  #30 = Utf8               getDeclaredMethod
+  #31 = Utf8               (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+  #32 = Utf8               java/lang/reflect/Method
+  #33 = Utf8               invoke
+  #34 = Utf8               (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+{
+  public com.yh.springeasy.invoke.ReflectionMain();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 5: 0
+
+  public void reflection() throws java.lang.Exception;
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=4, args_size=1
+         0: ldc           #2                  // String length
+         2: astore_1
+         3: ldc           #3                  // class java/lang/String
+         5: aload_1
+         6: iconst_0
+         7: anewarray     #4                  // class java/lang/Class
+        10: invokevirtual #5                  // Method java/lang/Class.getDeclaredMethod:(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+        13: astore_2
+        14: aload_2
+        15: ldc           #6                  // String abc
+        17: iconst_0
+        18: anewarray     #7                  // class java/lang/Object
+        21: invokevirtual #8                  // Method java/lang/reflect/Method.invoke:(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+        24: astore_3
+        25: return
+      LineNumberTable:
+        line 9: 0
+        line 10: 3
+        line 11: 14
+        line 12: 25
+    Exceptions:
+      throws java.lang.Exception
+}
+SourceFile: "ReflectionMain.java"

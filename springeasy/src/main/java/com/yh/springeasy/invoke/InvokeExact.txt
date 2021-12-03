@@ -1,0 +1,118 @@
+Classfile /Users/hui.yang/IdeaProjects/MyCodeLoad3.0/springeasy/src/main/java/com/yh/springeasy/invoke/InvokeExact.class
+  Last modified 2021-12-3; size 1052 bytes
+  MD5 checksum 4df0232f7fc0c8866c58b34896e748c6
+  Compiled from "InvokeExact.java"
+public class com.yh.springeasy.invoke.InvokeExact
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #12.#22        // java/lang/Object."<init>":()V
+   #2 = Methodref          #23.#24        // java/lang/invoke/MethodHandles.lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+   #3 = Class              #25            // java/lang/String
+   #4 = Fieldref           #26.#27        // java/lang/Integer.TYPE:Ljava/lang/Class;
+   #5 = Class              #28            // java/lang/Class
+   #6 = Methodref          #29.#30        // java/lang/invoke/MethodType.methodType:(Ljava/lang/Class;Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+   #7 = String             #31            // substring
+   #8 = Methodref          #32.#33        // java/lang/invoke/MethodHandles$Lookup.findVirtual:(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;
+   #9 = String             #34            // Hello World
+  #10 = Methodref          #35.#36        // java/lang/invoke/MethodHandle.invokeExact:(Ljava/lang/String;II)Ljava/lang/String;
+  #11 = Class              #37            // com/yh/springeasy/invoke/InvokeExact
+  #12 = Class              #38            // java/lang/Object
+  #13 = Utf8               <init>
+  #14 = Utf8               ()V
+  #15 = Utf8               Code
+  #16 = Utf8               LineNumberTable
+  #17 = Utf8               invokeExact
+  #18 = Utf8               Exceptions
+  #19 = Class              #39            // java/lang/Throwable
+  #20 = Utf8               SourceFile
+  #21 = Utf8               InvokeExact.java
+  #22 = NameAndType        #13:#14        // "<init>":()V
+  #23 = Class              #40            // java/lang/invoke/MethodHandles
+  #24 = NameAndType        #41:#44        // lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+  #25 = Utf8               java/lang/String
+  #26 = Class              #45            // java/lang/Integer
+  #27 = NameAndType        #46:#47        // TYPE:Ljava/lang/Class;
+  #28 = Utf8               java/lang/Class
+  #29 = Class              #48            // java/lang/invoke/MethodType
+  #30 = NameAndType        #49:#50        // methodType:(Ljava/lang/Class;Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+  #31 = Utf8               substring
+  #32 = Class              #51            // java/lang/invoke/MethodHandles$Lookup
+  #33 = NameAndType        #52:#53        // findVirtual:(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;
+  #34 = Utf8               Hello World
+  #35 = Class              #54            // java/lang/invoke/MethodHandle
+  #36 = NameAndType        #17:#55        // invokeExact:(Ljava/lang/String;II)Ljava/lang/String;
+  #37 = Utf8               com/yh/springeasy/invoke/InvokeExact
+  #38 = Utf8               java/lang/Object
+  #39 = Utf8               java/lang/Throwable
+  #40 = Utf8               java/lang/invoke/MethodHandles
+  #41 = Utf8               lookup
+  #42 = Utf8               Lookup
+  #43 = Utf8               InnerClasses
+  #44 = Utf8               ()Ljava/lang/invoke/MethodHandles$Lookup;
+  #45 = Utf8               java/lang/Integer
+  #46 = Utf8               TYPE
+  #47 = Utf8               Ljava/lang/Class;
+  #48 = Utf8               java/lang/invoke/MethodType
+  #49 = Utf8               methodType
+  #50 = Utf8               (Ljava/lang/Class;Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+  #51 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #52 = Utf8               findVirtual
+  #53 = Utf8               (Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;
+  #54 = Utf8               java/lang/invoke/MethodHandle
+  #55 = Utf8               (Ljava/lang/String;II)Ljava/lang/String;
+{
+  public com.yh.springeasy.invoke.InvokeExact();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 7: 0
+
+  public void invokeExact() throws java.lang.Throwable;
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=6, locals=5, args_size=1
+         0: invokestatic  #2                  // Method java/lang/invoke/MethodHandles.lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+         3: astore_1
+         4: ldc           #3                  // class java/lang/String
+         6: getstatic     #4                  // Field java/lang/Integer.TYPE:Ljava/lang/Class;
+         9: iconst_1
+        10: anewarray     #5                  // class java/lang/Class
+        13: dup
+        14: iconst_0
+        15: getstatic     #4                  // Field java/lang/Integer.TYPE:Ljava/lang/Class;
+        18: aastore
+        19: invokestatic  #6                  // Method java/lang/invoke/MethodType.methodType:(Ljava/lang/Class;Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/invoke/MethodType;
+        22: astore_2
+        23: aload_1
+        24: ldc           #3                  // class java/lang/String
+        26: ldc           #7                  // String substring
+        28: aload_2
+        29: invokevirtual #8                  // Method java/lang/invoke/MethodHandles$Lookup.findVirtual:(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;
+        32: astore_3
+        33: aload_3
+        34: ldc           #9                  // String Hello World
+        36: iconst_1
+        37: iconst_3
+        38: invokevirtual #10                 // Method java/lang/invoke/MethodHandle.invokeExact:(Ljava/lang/String;II)Ljava/lang/String;
+        41: astore        4
+        43: return
+      LineNumberTable:
+        line 10: 0
+        line 11: 4
+        line 12: 23
+        line 13: 33
+        line 14: 43
+    Exceptions:
+      throws java.lang.Throwable
+}
+SourceFile: "InvokeExact.java"
+InnerClasses:
+     public static final #42= #32 of #23; //Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
