@@ -1,12 +1,15 @@
+/*
 package com.yh.math.middle;
 
 import java.util.*;
 
+*/
 /**
  * https://zhuanlan.zhihu.com/p/93530380
  * https://labuladong.gitee.io/algo/
  * 回溯算法
- */
+ *//*
+
 public class Math46 {
 
 
@@ -51,3 +54,4 @@ public class Math46 {
     }
 
 }
+*/
