@@ -4,11 +4,9 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.yh.mybatisplus.demouser.entity.DemoUser;
 import com.yh.mybatisplus.demouser.mapper.DemoUserMapper;
+import com.yh.mybatisplus.demouser.service.DemoUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Mybatis-Plus 使用demo
@@ -20,6 +18,8 @@ public class DemoUserController {
     @Autowired
     private DemoUserMapper demoUserMapper;
 
+    @Autowired
+    private DemoUserService demoUserService;
 
     /**
      * 分页查询
@@ -29,8 +29,8 @@ public class DemoUserController {
      * @return
      */
     @GetMapping("/five")
-    public Object testFive(@RequestParam(required = true,defaultValue = "1") Integer pageNum,
-                           @RequestParam(required = true,defaultValue = "20") Integer pageSize) {
+    public Object testFive(@RequestParam(required = true, defaultValue = "1") Integer pageNum,
+                           @RequestParam(required = true, defaultValue = "20") Integer pageSize) {
         PageHelper.startPage(pageNum, pageSize);
         //配置系统属性为true,代理类生成时将自动写入磁盘
         System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
@@ -38,4 +38,12 @@ public class DemoUserController {
         PageHelper.clearPage();
         return pageInfo;
     }
+
+    @PostMapping("/demouser")
+    public void add(@RequestBody DemoUser demoUser) {
+        demoUserService.addDemoUser(demoUser);
+
+    }
+
+
 }
