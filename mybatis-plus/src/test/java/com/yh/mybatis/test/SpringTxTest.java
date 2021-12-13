@@ -1,6 +1,5 @@
 package com.yh.mybatis.test;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.yh.mybatisplus.MybatisPlusMain;
 import com.yh.mybatisplus.demouser.entity.DemoUser;
 import com.yh.mybatisplus.demouser.mapper.DemoUserMapper;
@@ -8,6 +7,7 @@ import com.yh.mybatisplus.demouser.service.DemoUserService;
 import com.yh.mybatisplus.demouser.service.impl.DemoUserServiceImplFour;
 import com.yh.mybatisplus.demouser.service.impl.DemoUserServiceImplThree;
 import com.yh.mybatisplus.demouser.service.impl.DemoUserServiceImplTwo;
+import com.yh.mybatisplus.demouser.service.impl.PropagationService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -149,5 +149,80 @@ public class SpringTxTest {
         // 使用AopContext.currentProxy()获取代理对象 调用方法
         demoUserServiceImplFour.addDemoUserTwoFix(DemoUser.builder().name("test500").age(500).build());
         //  demoUserServiceImplFour.addDemoUserThree(DemoUser.builder().name("test500").age(500).build());
+    }
+
+    @Autowired
+    PropagationService propagationService;
+
+    /**
+     * 探究事物的传播行为--REQUIRED
+     */
+    @Test
+    public void testFive() {
+        propagationService.REQUIRED_A();
+    }
+
+    /**
+     * 探究事物的传播行为--SUPPORTS
+     */
+    @Test
+    public void testSix() {
+        //  propagationService.SUPPORTS_A();
+        //直接调用methodB，当前没有事务，就以非事务执行
+        propagationService.SUPPORTS_B();
+    }
+
+    /**
+     * 探究事物的传播行为--MANDATORY
+     */
+    @Test
+    public void testSeven() {
+        //  propagationService.MANDATORY_A();
+        //如果当前不存在事务，就抛出异常
+        //No existing transaction found for transaction marked with propagation 'mandatory'
+        propagationService.MANDATORY_B();
+    }
+
+    /**
+     * 探究事物的传播行为--REQUIRES_NEW
+     */
+    @Test
+    public void test8() {
+        propagationService.REQUIRES_NEW_A();
+    }
+
+    /**
+     * 探究事物的传播行为--NOT_SUPPORTED
+     */
+    @Test
+    public void test9() {
+        // propagationService.NOT_SUPPORTED_A();
+        propagationService.NOT_SUPPORTED_B();
+    }
+
+    /**
+     * 探究事物的传播行为--NEVER
+     */
+    @Test
+    public void test10() {
+        //   propagationService.NEVER_A();
+        propagationService.NEVER_B();
+    }
+
+    /**
+     * 探究事物的传播行为--NESTED
+     */
+    @Test
+    public void test11() {
+        // propagationService.NESTED_A();
+        propagationService.NESTED_B();
+    }
+
+    /**
+     * 探究事物的超时回滚机制
+     */
+    @Test
+    public void test12() throws InterruptedException {
+        propagationService.timeOut();
     }
 }
