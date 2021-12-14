@@ -22,7 +22,7 @@ public class DemoUserServiceImpl implements DemoUserService {
     @Override
     public void addDemoUser(DemoUser demoUser) {
             demoUserMapper.insert(demoUser);
-            int i = 1 / 0;
+           // int i = 1 / 0;
     }
 
     /**

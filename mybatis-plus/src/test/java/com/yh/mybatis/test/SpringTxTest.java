@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cglib.core.DebuggingClassWriter;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
@@ -46,6 +47,10 @@ public class SpringTxTest {
 
     @Test
     public void test() {
+        // 设置输出代理类到指定路径，便于后面分析
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY,
+                "/Users/hui.yang/IdeaProjects/MyCodeLoad3.0/mybatis-plus/");
+        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
         demoUserService.addDemoUser(DemoUser.builder()
                 .name("事物测试1").age(100)
                 .build());
