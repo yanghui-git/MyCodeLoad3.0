@@ -52,12 +52,52 @@ public class SpringTxTest {
                 "/Users/hui.yang/IdeaProjects/MyCodeLoad3.0/mybatis-plus/");
         System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
         demoUserService.addDemoUser(DemoUser.builder()
-                .name("事物测试1").age(100)
+                .name("事物测试11111").age(100)
                 .build());
         //检验
         //  System.out.println(demoUserMapper.selectList(new LambdaQueryWrapper<DemoUser>()
         //        .eq(DemoUser::getName, "事物测试1")));
     }
+
+    /**
+     * 源码解析流程
+     * 1 CGlibAopproxy DynamicAdvisedInterceptor() 通用General purpose AOP  进入统一AOP
+     *
+     * 	 2 	// 执行目标方法
+     * 	retVal = new CglibMethodInvocation(proxy, target, method, args, targetClass, chain, methodProxy).proceed();
+     *
+     * 	3 ReflectiveMethodInvocation.proceed()
+     *     此处判断 可以 控制 先获取事物控制器 --- 代码执行 --事物回滚/提交 逻辑顺序
+     * 	// We start with an index of -1 and increment early.
+     * 		if (this.currentInterceptorIndex == this.interceptorsAndDynamicMethodMatchers.size() - 1) {
+     * 			return invokeJoinpoint();
+     *                }
+     *
+     * 3.1 先获取 事物控制器
+     *    开始进入事物流程 事物控制器开始工作
+     *   ((MethodInterceptor) interceptorOrInterceptionAdvice).invoke(this);
+     *    TransactionInterceptor.invoke()
+     *
+     * 3.2 TransactionAspectSupport.invokeWithinTransaction() ！！！最终方法
+     *        部分源码
+     *       // 获取事物
+     *   	TransactionInfo txInfo = createTransactionIfNecessary(ptm, txAttr, joinpointIdentification);
+     * 		Object retVal;
+     * 		try {
+     * 			 //执行目标函数  设计复用了3.1
+     * 		retVal = invocation.proceedWithInvocation();
+     *            }
+     * 		catch (Throwable ex) {
+     * 			// target invocation exception
+     * 			// 失败回滚
+     * 				completeTransactionAfterThrowing(txInfo, ex);
+     * 				throw ex;
+     *           }
+     *         // 提交执行
+     * 			commitTransactionAfterReturning(txInfo);
+     * 			return retVal;
+     *
+     */
 
     /**
      * 探究事物失效1：  只能应用于public
