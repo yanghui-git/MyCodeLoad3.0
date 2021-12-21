@@ -19,6 +19,7 @@
         <module>FastJson</module>
         <module>mongo</module>
         <module>math</module>
+        <module>xxl-rpc-analyze</module>
     </modules>
 
 
