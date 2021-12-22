@@ -5,13 +5,14 @@ import com.yh.xxlrpc.analyze.consumer.controller.XxlRpcReference;
 import com.yh.xxlrpc.analyze.consumer.controller.XxlRpcReferenceBean;
 import org.junit.Test;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessorAdapter;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.lang.reflect.Field;
 
-public class XxlRpcSpringInvokerFactory extends InstantiationAwareBeanPostProcessorAdapter {
+public class XxlRpcSpringInvokerFactory extends InstantiationAwareBeanPostProcessorAdapter implements InitializingBean {
 
     /**
      * Bean 初始化之后调用
@@ -54,5 +55,11 @@ public class XxlRpcSpringInvokerFactory extends InstantiationAwareBeanPostProces
     public void test() {
         System.out.println(new ConsumerTestController().getClass().isAnnotationPresent(XxlRpcReference.class));
         System.out.println(new ConsumerTestController().getClass().isAnnotationPresent(RequestMapping.class));
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        //开启后台定时线程 去 服务端轮询获取 服务提供者地址
+        new XxlRpcInvokerFactory().start();
     }
 }
