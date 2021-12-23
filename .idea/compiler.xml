@@ -8,17 +8,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mongo" />
-        <module name="xxl-rpc-analyze" />
-        <module name="nacos-consumer" />
+        <module name="samples-order" />
         <module name="zookeeper" />
         <module name="codis" />
+        <module name="samples-business" />
+        <module name="akka" />
+        <module name="nacos-demo-service" />
+        <module name="xxl-rpc-analyze" />
+        <module name="nacos-consumer" />
         <module name="FastJson" />
+        <module name="samples-stock" />
         <module name="math" />
         <module name="springeasy" />
-        <module name="akka" />
         <module name="nacos-provider" />
         <module name="mybatis-plus" />
-        <module name="nacos-demo-service" />
+        <module name="samples-common" />
+        <module name="samples-account" />
       </profile>
     </annotationProcessing>
   </component>
