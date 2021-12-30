@@ -17,8 +17,9 @@
         <module>mongo</module>
         <module>math</module>
         <module>xxl-rpc-analyze</module>
-        <module>Seata-Analyse</module>
         <module>nacos</module>
+        <module>feign</module>
+        <module>Seata-Analyse</module>
     </modules>
 
 

@@ -9,9 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mongo" />
         <module name="samples-order" />
+        <module name="feign-share" />
         <module name="zookeeper" />
         <module name="codis" />
         <module name="samples-business" />
+        <module name="feign-produce" />
         <module name="akka" />
         <module name="nacos-demo-service" />
         <module name="xxl-rpc-analyze" />
@@ -23,8 +25,12 @@
         <module name="nacos-provider" />
         <module name="mybatis-plus" />
         <module name="samples-common" />
+        <module name="feign-consumer" />
         <module name="samples-account" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="feign-producer" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
