@@ -19,6 +19,12 @@
         <option value="$PROJECT_DIR$/feign/pom.xml" />
         <option value="$PROJECT_DIR$/feign/feign-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/feign/feign-share/pom.xml" />
+        <option value="$PROJECT_DIR$/seata-transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/seata-transaction/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/OAuth2/pom.xml" />
+        <option value="$PROJECT_DIR$/OAuth2/oauth2-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/OAuth2/oauth2-resource-server/pom.xml" />
+        <option value="$PROJECT_DIR$/OAuth2/oauth2-server/pom.xml" />
       </list>
     </option>
   </component>

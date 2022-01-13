@@ -8,29 +8,45 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mongo" />
-        <module name="samples-order" />
         <module name="feign-share" />
         <module name="zookeeper" />
         <module name="codis" />
-        <module name="samples-business" />
         <module name="feign-produce" />
+        <module name="order-server" />
         <module name="akka" />
+        <module name="eureka-server" />
         <module name="nacos-demo-service" />
+        <module name="account-server" />
         <module name="xxl-rpc-analyze" />
         <module name="nacos-consumer" />
         <module name="FastJson" />
-        <module name="samples-stock" />
+        <module name="oauth2-consumer" />
+        <module name="storage-server" />
         <module name="math" />
+        <module name="oauth2-server" />
+        <module name="oauth2-resource-server" />
         <module name="springeasy" />
         <module name="nacos-provider" />
         <module name="mybatis-plus" />
-        <module name="samples-common" />
         <module name="feign-consumer" />
-        <module name="samples-account" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="feign-producer" target="1.5" />
+      <module name="samples-account" target="7" />
+      <module name="samples-business" target="7" />
+      <module name="samples-common" target="7" />
+      <module name="samples-order" target="7" />
+      <module name="samples-stock" target="7" />
+      <module name="Seata-Analyse" target="1.5" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka-server" options="-parameters" />
+      <module name="oauth2-consumer" options="-parameters" />
+      <module name="oauth2-resource-server" options="-parameters" />
+      <module name="oauth2-server" options="-parameters" />
+    </option>
   </component>
 </project>

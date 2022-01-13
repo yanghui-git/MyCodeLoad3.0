@@ -19,7 +19,7 @@
         <module>xxl-rpc-analyze</module>
         <module>nacos</module>
         <module>feign</module>
-        <module>Seata-Analyse</module>
+        <module>seata-transaction</module>
     </modules>
 
 
