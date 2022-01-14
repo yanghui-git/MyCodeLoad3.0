@@ -93,26 +93,19 @@ public class TestController {
      */
     @GetMapping("/three")
     public void testThree() throws Exception {
-        LinkedMultiValueMap formData =new LinkedMultiValueMap<String,String>();
-        formData.add("token","7cdd8035-70d9-4c93-9682-025f29452fd1");
-        HttpHeaders headers=new HttpHeaders();
-        headers.add("Authorization","Basic bnVsbDo3Y2M1YmY4ZC0yZTNlLTRmODMtYmVjMi0zOTIxNzVlMGZmOGI=");
-        headers.add("Content-Type","application/x-www-form-urlencoded");
+        LinkedMultiValueMap formData = new LinkedMultiValueMap<String, String>();
+        formData.add("token", "ea06134b-f79a-4c84-ac62-0888bf43bd89");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", "Basic bnVsbDo3Y2M1YmY4ZC0yZTNlLTRmODMtYmVjMi0zOTIxNzVlMGZmOGI=");
+        headers.add("Content-Type", "application/x-www-form-urlencoded");
 
         try {
-            ResponseEntity responseEntity= (ResponseEntity) restTemplate.exchange("http://localhost:7777/oauth/check_token", HttpMethod.POST,
+            ResponseEntity responseEntity = (ResponseEntity) restTemplate.exchange("http://localhost:7777/oauth/check_token", HttpMethod.POST,
                     new HttpEntity<MultiValueMap<String, String>>(formData, headers), Map.class).getBody();
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e);
         }
-       // restTemplate.exchange("http://localhost:7777/oauth/check_token?token=7cdd8035-70d9-4c93-9682-025f29452fd1", new HttpEntity<MultiValueMap<String, String>>(formData, headers), Map.class);
-
-        List<NameValuePair> formParams=new ArrayList<>();
-        formData.add("token","7cdd8035-70d9-4c93-9682-025f29452fd1");
-        HttpUtil.post("http://localhost:7777/oauth/check_token?token=7cdd8035-70d9-4c93-9682-025f29452fd1",formParams);
+        System.out.println(HttpUtil.get("http://localhost:7777/oauth/check_token?token=ea06134b-f79a-4c84-ac62-0888bf43bd89"));
     }
 
-    public static void main(String[] args) throws Exception {
-        System.out.println(HttpUtil.get("http://localhost:7778/resource_server?access_token=7cdd8035-70d9-4c93-9682-025f29452fd1"));
-    }
 }

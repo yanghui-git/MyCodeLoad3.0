@@ -1,18 +1,10 @@
 package com.oathc.authresource.conf;
-
-import org.springframework.context.annotation.Bean;
+import org.springframework.boot.autoconfigure.security.oauth2.resource.UserInfoTokenServices;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.oauth2.client.OAuth2ClientContext;
-import org.springframework.security.oauth2.client.OAuth2RestTemplate;
-import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResourceDetails;
-import org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeAccessTokenProvider;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
-import org.springframework.security.oauth2.provider.token.RemoteTokenServices;
-
-import java.util.UUID;
 
 
 @Configuration
@@ -21,21 +13,10 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
-      //  resources.tokenServices(remoteTokenServices());
+        // 设置 auth2 远程 认证服务器 校验方法类
+        resources.tokenServices(new UserInfoTokenServicesMySelf("http://localhost:7777/oauth/check_token"
+               , "cms"));
         super.configure(resources);
-    }
-
-    /**
-     * 配置资源服务器的 token service
-     *
-     * @return
-     */
-    public RemoteTokenServices remoteTokenServices() {
-        RemoteTokenServices services = new RemoteTokenServices();
-        services.setCheckTokenEndpointUrl("http://localhost:7777/oauth/check_token");
-        services.setClientId("cms");
-        services.setClientSecret(UUID.randomUUID().toString());
-        return services;
     }
 
     @Override
