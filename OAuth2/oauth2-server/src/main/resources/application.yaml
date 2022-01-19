@@ -11,3 +11,8 @@ spring:
     encoding: UTF-8
     servlet:
       content-type: text/html
+
+# 设置日志打印级别 用于调试源码
+logging:
+  level:
+    root: debug
