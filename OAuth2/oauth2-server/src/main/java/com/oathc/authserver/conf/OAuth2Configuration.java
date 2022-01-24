@@ -79,6 +79,10 @@ public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter {
                 .authorizedGrantTypes(GRANT_TYPE_PASSWORD, AUTHORIZATION_CODE, REFRESH_TOKEN, IMPLICIT); //允许授权类型
     }
 
+
+    @Autowired
+    private SecurityUserDetailsService securityUserDetailsService;
+
     /**
      * 用来配置授权（authorization）以及令牌（token）的访问端点和令牌服务(token services)
      *
@@ -89,6 +93,7 @@ public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter {
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         // 使用内存保存生成的token
         endpoints.authenticationManager(authenticationManager).tokenStore(memoryTokenStore());
+        endpoints.userDetailsService(securityUserDetailsService);
     }
 
     public TokenStore memoryTokenStore() {
