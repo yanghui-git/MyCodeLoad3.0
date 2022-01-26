@@ -72,7 +72,7 @@ public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter {
                 .withClient(CLIENT_ID) //标记客户端id
                 .secret(passwordEncoder.encode(SECRET_CHAR_SEQUENCE)) //客户端安全码
                 .autoApprove(false) //为true 直接自动授权成功返回code
-                .redirectUris("http://localhost:7000") //重定向uri，uri中携带的必须为这里面填写的之一
+                .redirectUris("http://localhost:7778/resource_server") //重定向uri，uri中携带的必须为这里面填写的之一
                 .scopes("app", "file", "zone") //允许授权范围，ALL就不会出现授权页
 //                .accessTokenValiditySeconds(ACCESS_TOKEN_VALIDITY_SECONDS) //token 时间秒
 //                .refreshTokenValiditySeconds(REFRESH_TOKEN_VALIDITY_SECONDS) //刷新token 时间 秒
