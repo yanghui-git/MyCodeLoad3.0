@@ -42,9 +42,6 @@ public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter {
     @Autowired
     private AuthenticationManager authenticationManager;
 
-    @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
-
     /**
      * 用来配置令牌端点(Token Endpoint)的安全约束
      *
@@ -65,6 +62,8 @@ public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter {
      * @param clients
      * @throws Exception
      */
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         // 使用内存存储
@@ -76,7 +75,25 @@ public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter {
                 .scopes("app", "file", "zone") //允许授权范围，ALL就不会出现授权页
 //                .accessTokenValiditySeconds(ACCESS_TOKEN_VALIDITY_SECONDS) //token 时间秒
 //                .refreshTokenValiditySeconds(REFRESH_TOKEN_VALIDITY_SECONDS) //刷新token 时间 秒
-                .authorizedGrantTypes(GRANT_TYPE_PASSWORD, AUTHORIZATION_CODE, REFRESH_TOKEN, IMPLICIT); //允许授权类型
+                .authorizedGrantTypes(GRANT_TYPE_PASSWORD, AUTHORIZATION_CODE, REFRESH_TOKEN, IMPLICIT)
+
+                // 配置密码授权模式
+                .and()
+                .withClient("cms1")
+                .authorizedGrantTypes("password", "refresh_token")
+                .scopes("select")
+                .authorities("oauth2")
+                // user --->  BCryptPasswordEncoder 加密算法生成
+                .secret("$2a$10$vrRjc8vlDwv6gBHlv/me8eeRsHO7P3I7ge0F03sr4C3hh/SmS/lMC");
+    }
+
+    public static void main(String[] args) {
+        String pass = "user";
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        final String passHash = encoder.encode(pass);
+        System.out.println(passHash);
+        final boolean matches = encoder.matches(pass, passHash);
+        System.out.println(matches);
     }
 
 
