@@ -1,5 +1,6 @@
 package com.oathc.authserver.conf;
 
+import javafx.scene.layout.AnchorPane;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -84,6 +85,14 @@ public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter {
                 .scopes("select")
                 .authorities("oauth2")
                 // user --->  BCryptPasswordEncoder 加密算法生成
+                .secret("$2a$10$vrRjc8vlDwv6gBHlv/me8eeRsHO7P3I7ge0F03sr4C3hh/SmS/lMC")
+
+               // 配置客户端授权模式
+                .and()
+                .withClient("client_1")
+                .authorizedGrantTypes("client_credentials", "refresh_token")
+                .scopes("select")
+                .authorities("oauth2")
                 .secret("$2a$10$vrRjc8vlDwv6gBHlv/me8eeRsHO7P3I7ge0F03sr4C3hh/SmS/lMC");
     }
 
