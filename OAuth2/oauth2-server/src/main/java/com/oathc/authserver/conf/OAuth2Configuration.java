@@ -103,6 +103,7 @@ public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter {
         System.out.println(passHash);
         final boolean matches = encoder.matches(pass, passHash);
         System.out.println(matches);
+        System.out.println(1<<5);
     }
 
 
