@@ -39,6 +39,7 @@
       <module name="samples-order" target="7" />
       <module name="samples-stock" target="7" />
       <module name="Seata-Analyse" target="1.5" />
+      <module name="seata-transaction" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

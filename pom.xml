@@ -10,7 +10,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>springeasy</module>
-        <module>akka</module>
         <module>math</module>
         <module>mybatis-plus</module>
         <module>FastJson</module>
@@ -19,7 +18,6 @@
         <module>xxl-rpc-analyze</module>
         <module>nacos</module>
         <module>feign</module>
-        <module>seata-transaction</module>
     </modules>
 
 
