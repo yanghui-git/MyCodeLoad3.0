@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("discovery")
+@RequestMapping("provider-test/discovery")
 public class DiscoverController {
 
     @Autowired

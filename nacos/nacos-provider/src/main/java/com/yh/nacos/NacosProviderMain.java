@@ -6,8 +6,8 @@ import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
 @ImportResource(locations = {"classpath:spring.xml"})
-public class NacosMain {
+public class NacosProviderMain {
     public static void main(String[] args) {
-        SpringApplication.run(NacosMain.class);
+        SpringApplication.run(NacosProviderMain.class);
     }
 }

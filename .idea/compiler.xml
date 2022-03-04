@@ -12,16 +12,13 @@
         <module name="zookeeper" />
         <module name="codis" />
         <module name="feign-produce" />
-        <module name="order-server" />
         <module name="akka" />
-        <module name="eureka-server" />
         <module name="nacos-demo-service" />
-        <module name="account-server" />
         <module name="xxl-rpc-analyze" />
         <module name="nacos-consumer" />
         <module name="FastJson" />
         <module name="oauth2-consumer" />
-        <module name="storage-server" />
+        <module name="spring-cloud-gateway-nocos" />
         <module name="math" />
         <module name="oauth2-server" />
         <module name="oauth2-resource-server" />
@@ -32,7 +29,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="account-server" target="1.5" />
+      <module name="eureka-server" target="1.8" />
       <module name="feign-producer" target="1.5" />
+      <module name="order-server" target="1.5" />
       <module name="samples-account" target="7" />
       <module name="samples-business" target="7" />
       <module name="samples-common" target="7" />
@@ -40,6 +40,7 @@
       <module name="samples-stock" target="7" />
       <module name="Seata-Analyse" target="1.5" />
       <module name="seata-transaction" target="1.5" />
+      <module name="storage-server" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

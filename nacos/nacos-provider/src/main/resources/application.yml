@@ -5,3 +5,10 @@ nacos:
   username: nacos
   password: nacos
   server-addr: 121.199.72.238:8848
+
+spring:
+  application:
+    name: nacos-provider-test
+
+server:
+  port: 8000
