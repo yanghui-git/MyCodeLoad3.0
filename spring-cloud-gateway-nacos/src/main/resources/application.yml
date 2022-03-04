@@ -23,7 +23,7 @@ spring:
     gateway:
       routes:
         - id: provider-test-one
-          uri: http://localhost:8000
+          uri: http://localhost:8001
           predicates:
           - Path=/provider-test/**
 
