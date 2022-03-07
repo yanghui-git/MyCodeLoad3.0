@@ -1,14 +1,6 @@
-nacos:
-  config:
-  #  使用namespace=public时, 这里不能显示指定. 否则会拿不到数据
-  namespace: public
-  username: nacos
-  password: nacos
-  server-addr: 121.199.72.238:8848
-
 spring:
   application:
     name: nacos-provider-test
 
 server:
-  port: 8000
+  port: 8002

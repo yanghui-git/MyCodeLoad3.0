@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mongo" />
+        <module name="nacos-moudle" />
         <module name="feign-share" />
         <module name="zookeeper" />
         <module name="codis" />
@@ -16,6 +17,7 @@
         <module name="nacos-demo-service" />
         <module name="xxl-rpc-analyze" />
         <module name="nacos-consumer" />
+        <module name="gateway-moudle" />
         <module name="FastJson" />
         <module name="oauth2-consumer" />
         <module name="spring-cloud-gateway-nocos" />
@@ -26,14 +28,12 @@
         <module name="nacos-provider" />
         <module name="mybatis-plus" />
         <module name="feign-consumer" />
-        <module name="spring-cloud-gateway-nacos" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="account-server" target="1.5" />
       <module name="eureka-server" target="1.8" />
       <module name="feign-producer" target="1.5" />
-      <module name="gateway" target="8" />
       <module name="nacosserverone" target="1.5" />
       <module name="nacosservertwo" target="1.5" />
       <module name="order-server" target="1.5" />

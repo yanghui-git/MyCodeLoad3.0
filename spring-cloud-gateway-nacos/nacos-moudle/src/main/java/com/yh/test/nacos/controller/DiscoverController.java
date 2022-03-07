@@ -1,7 +1,5 @@
-package com.yh.nacos.controller;
+package com.yh.test.nacos.controller;
 
-import com.demo.service.DemoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,13 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("provider-test/discovery")
 public class DiscoverController {
 
-    @Autowired
-    private DemoService demoService;
 
     @GetMapping("/one")
-    public void testOne() {
-        demoService.sayHello();
-        demoService.sayHi();
+    public Object testOne() {
+        System.out.println(System.getProperty("server.port"));
+        return "当前执行机器" + System.getProperty("server.port");
     }
 
 }

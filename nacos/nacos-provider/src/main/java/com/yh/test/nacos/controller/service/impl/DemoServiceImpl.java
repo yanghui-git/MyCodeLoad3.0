@@ -1,4 +1,4 @@
-package com.yh.nacos.controller.service.impl;
+package com.yh.test.nacos.controller.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.demo.service.DemoService;

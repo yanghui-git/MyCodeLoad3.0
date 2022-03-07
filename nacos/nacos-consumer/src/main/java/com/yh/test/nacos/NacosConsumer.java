@@ -1,4 +1,4 @@
-package com.yh.nacos;
+package com.yh.test.nacos;
 
 import com.demo.service.DemoService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

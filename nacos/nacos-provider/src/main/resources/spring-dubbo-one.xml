@@ -10,9 +10,11 @@
     <!-- 提供方应用信息，用于计算依赖关系 -->
     <dubbo:application name="dubbo-nacos-provider"/>
 
-    <dubbo:annotation package="com.yh.nacos"/>
+    <dubbo:annotation package="com.yh.test"/>
 
-    <dubbo:registry address="nacos://121.199.72.238:8848/" client="curator" timeout="30000" version="1.0"/>
+    <dubbo:registry address="nacos://121.199.72.238:8848/" client="curator" timeout="30000" version="1.0"
+    server="test-hahah"
+    />
 
     <dubbo:protocol name="dubbo" port="7791" serialization="kryo"/>
 
