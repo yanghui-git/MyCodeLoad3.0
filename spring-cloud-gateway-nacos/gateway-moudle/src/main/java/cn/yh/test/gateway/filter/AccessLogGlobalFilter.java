@@ -2,7 +2,6 @@ package cn.yh.test.gateway.filter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.*;
-import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
@@ -17,7 +16,6 @@ import java.net.InetSocketAddress;
  */
 @Slf4j
 @Component
-@Order(value = Integer.MIN_VALUE)
 public class AccessLogGlobalFilter implements GlobalFilter {
 
     @Override
