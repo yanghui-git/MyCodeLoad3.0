@@ -1,0 +1,6 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: spring 循环依赖分析专题demo

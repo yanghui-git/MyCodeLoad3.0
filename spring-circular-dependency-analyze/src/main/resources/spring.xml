@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+    <!-- 1. 使用property初始化Bean属性 -->
+    <bean id="serviceA" class="com.yh.spring.circular.service.ServiceA">
+        <property name="serviceB" ref="serviceB"></property>
+    </bean>
+
+    <!-- 1. 使用property初始化Bean属性 -->
+    <bean id="serviceB" class="com.yh.spring.circular.service.ServiceB">
+        <property name="serviceC" ref="serviceC"></property>
+    </bean>
+
+    <bean id="serviceC" class="com.yh.spring.circular.service.ServiceC">
+        <property name="serviceA" ref="serviceA"></property>
+    </bean>
+</beans>

@@ -19,6 +19,7 @@
         <module>nacos</module>
         <module>feign</module>
         <module>spring-cloud-gateway-nacos</module>
+        <module>spring-circular-dependency-analyze</module>
     </modules>
 
 

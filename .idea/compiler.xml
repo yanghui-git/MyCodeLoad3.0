@@ -24,6 +24,7 @@
         <module name="math" />
         <module name="oauth2-server" />
         <module name="oauth2-resource-server" />
+        <module name="spring-circular-dependency-analyze" />
         <module name="springeasy" />
         <module name="nacos-provider" />
         <module name="mybatis-plus" />
