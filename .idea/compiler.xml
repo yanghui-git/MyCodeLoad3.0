@@ -11,6 +11,7 @@
         <module name="nacos-moudle" />
         <module name="feign-share" />
         <module name="zookeeper" />
+        <module name="springboot-mytest-starter" />
         <module name="codis" />
         <module name="feign-produce" />
         <module name="akka" />

@@ -20,6 +20,7 @@
         <module>feign</module>
         <module>spring-cloud-gateway-nacos</module>
         <module>spring-circular-dependency-analyze</module>
+        <module>springboot-mytest-starter</module>
     </modules>
 
 
