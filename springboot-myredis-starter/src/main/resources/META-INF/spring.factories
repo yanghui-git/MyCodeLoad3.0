@@ -1,0 +1,2 @@
+# 配置需要 跨模块Bean的信息
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.mytest.starter.util.EnableRedis

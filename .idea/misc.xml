@@ -26,6 +26,7 @@
         <option value="$PROJECT_DIR$/OAuth2/oauth2-resource-server/pom.xml" />
         <option value="$PROJECT_DIR$/OAuth2/oauth2-server/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-myredis-starter/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

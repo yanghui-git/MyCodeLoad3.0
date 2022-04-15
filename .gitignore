@@ -1,4 +1,8 @@
-target
+# gitignore
+*~
+.DS_Store
+*.iml
 .idea
-.project
-*iml
+target
+/LOG_PATH_IS_UNDEFINED/
+/META-INF/
