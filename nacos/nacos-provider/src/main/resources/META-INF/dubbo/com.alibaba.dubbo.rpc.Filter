@@ -1,0 +1,1 @@
+dubboFilter=com.yh.test.nacos.filter.DubboFilter

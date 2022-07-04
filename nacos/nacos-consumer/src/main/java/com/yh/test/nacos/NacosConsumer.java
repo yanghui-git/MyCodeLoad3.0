@@ -15,8 +15,7 @@ public class NacosConsumer {
 
         //模拟调用
         DemoService demoService = classXml.getBean(DemoService.class);
-        demoService.sayHello();
-        //demoService.sayHi();
+        demoService.add(1, 2);
 
         System.in.read();
     }
